@@ -17,9 +17,18 @@ module.exports = function(grunt) {
 		var options = this.options({});
 		processor.setContext(options.context, grunt);
 		this.files.forEach(function(file) {
+
+			if (file.dest && !fs.existsSync(file.dest)) {
+				grunt.log.error("Please make sure that your chosen destination exists!");
+				grunt.log.error("Folder:\t" + file.dest);
+				throw new Error();
+			}
+
 			file.src.forEach(function (src) {
 				if(grunt.file.isFile(src)) {
 					var preprocessed = processor.preprocess(grunt, src, {}); 
+					grunt.verbose.write("Writing result to " + (file.dest + path.basename(src)).cyan + "...");
+					grunt.file.write(file.dest + path.basename(src), preprocessed);
 				}
 			});
 		});
