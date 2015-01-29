@@ -1,7 +1,7 @@
 {
 	"name": "grunt-schema-markup",
 	"description": "A HTML preprocessor for markup schema",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"homepage": "https://github.com/BenPoulson/grunt-schema-markup",
 	"author": {
 		"name": "Ben Poulson",
