@@ -38,6 +38,62 @@ grunt.initConfig({
 });
 ```
 
+### Example Usage
+The "schema_markup" tasks turns the following HTML
+```html
+<div schema-Person>
+	<span prop-name>Jane Doe</span>
+	<img  prop-image src="janedoe.jpg"  alt="Photo of Jane Joe" />
+	<span prop-jobTitle>Professor</span>
+	<div  prop-address schema-PostalAddress>
+		<span prop-streetAddress>
+			20341 Whitworth Institute
+			405 N. Whitworth
+		</span>
+		<span prop-addressLocality>Seattle</span>,
+		<span prop-addressRegion>WA</span>
+		<span prop-postalCode>98052</span>
+	</div>
+	<span prop-telephone>(425) 123-4567</span>
+	<a prop-email href="mailto:jane-doe@xyz.edu">jane-doe@xyz.edu</a>
+
+	Jane's home page:
+	<a prop-url href="http://www.janedoe.com">janedoe.com</a>
+
+	Graduate students:
+	<a prop-colleague href="http://www.xyz.edu/students/alicejones.html">Alice Jones</a>
+	<a prop-colleague href="http://www.xyz.edu/students/bobsmith.html">Bob Smith</a>
+</div>
+```
+
+into the following schema.org markup
+
+```html
+<div itemscope itemtype="http://schema.org/Person">
+	<span itemprop="name">Jane Doe</span>
+	<img  itemprop="image" src="janedoe.jpg"  alt="Photo of Jane Joe" />
+	<span itemprop="jobTitle">Professor</span>
+	<div  itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+		<span itemprop="streetAddress">
+			20341 Whitworth Institute
+			405 N. Whitworth
+		</span>
+		<span itemprop="addressLocality">Seattle</span>,
+		<span itemprop="addressRegion">WA</span>
+		<span itemprop="postalCode">98052</span>
+	</div>
+	<span itemprop="telephone">(425) 123-4567</span>
+	<a itemprop="email" href="mailto:jane-doe@xyz.edu">jane-doe@xyz.edu</a>
+	
+	Jane's home page:
+	<a itemprop="url" href="http://www.janedoe.com">janedoe.com</a>
+	
+	Graduate students:
+	<a itemprop="colleague" href="http://www.xyz.edu/students/alicejones.html">Alice Jones</a>
+	<a itemprop="colleague" href="http://www.xyz.edu/students/bobsmith.html">Bob Smith</a>
+</div>
+```
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
