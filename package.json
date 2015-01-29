@@ -1,0 +1,45 @@
+{
+	"name": "grunt-schema-markup",
+	"description": "A HTML preprocessor for markup schema",
+	"version": "0.1.0",
+	"homepage": "https://github.com/BenPoulson/grunt-schema-markup",
+	"author": {
+		"name": "Ben Poulson",
+		"email": "ben@terravita.co.uk",
+		"url": "https://benpoulson.me"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/BenPoulson/grunt-schema-markup.git"
+	},
+	"bugs": {
+		"url": "https://github.com/BenPoulson/grunt-schema-markup/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/BenPoulson/grunt-schema-markup/blob/master/LICENSE"
+		}
+	],
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"scripts": {
+		"test": "grunt test"
+	},
+	"devDependencies": {
+		"grunt-contrib-jshint": "^0.9.2",
+		"grunt-contrib-nodeunit": "^0.3.3",
+		"grunt": "~0.4.5"
+	},
+	"peerDependencies": {
+		"grunt": "~0.4.5"
+	},
+	"keywords": [
+		"gruntplugin"
+	],
+	"dependencies": {
+		"glob": "^4.2.1",
+		"grunt-contrib-clean": "^0.5.0"
+	}
+}
