@@ -15,7 +15,7 @@ var processor = require("../lib/processor.js");
 module.exports = function(grunt) {
 	grunt.registerMultiTask('schema_markup', 'A HTML preprocessor for markup schema', function() {
 		var options = this.options({});
-		processor.setContext(options.context, grunt);
+		
 		this.files.forEach(function(file) {
 
 			if (file.dest && !fs.existsSync(file.dest)) {
