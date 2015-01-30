@@ -1,7 +1,7 @@
 {
 	"name": "grunt-schema-markup",
 	"description": "A Grunt preprocessor to easily add schema.org markup to HTML templates.",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"homepage": "https://github.com/BenPoulson/grunt-schema-markup",
 	"author": {
 		"name": "Ben Poulson",
@@ -51,6 +51,7 @@
 	],
 	"dependencies": {
 		"glob": "^4.2.1",
-		"grunt-contrib-clean": "^0.5.0"
+		"grunt-contrib-clean": "^0.5.0",
+		"cheerio": "^0.18.0"
 	}
 }
